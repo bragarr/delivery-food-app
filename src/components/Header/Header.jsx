@@ -1,9 +1,11 @@
 import "./Header.css";
 
+import logo from "../../assets/logo.png";
+
 export function Header() {
     return (
         <header>
-            <p>Aqui será o nome do site</p>
+            <img src={logo} alt="logo do aplicativo" />
             <nav>
                 <ul>
                     <li>Home</li>
