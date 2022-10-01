@@ -1,0 +1,21 @@
+.site__header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.logo__tittle--container {
+    display: flex;
+    flex-direction: row;
+    align-items: baseline;
+}
+
+.logo {
+    width: 14vw;
+    padding: 2vh 1vw;
+}
+
+.site__tittle {
+    margin: 0;
+    padding: 2vw 0;
+}
