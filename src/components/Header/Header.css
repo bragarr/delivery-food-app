@@ -2,12 +2,16 @@
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+    align-items:center;
+    box-shadow: 2px 2px 10px 2px red;
+    height: 24vh;
 }
 
 .logo__tittle--container {
     display: flex;
     flex-direction: row;
-    align-items: baseline;
+    justify-content: space-between;
+    align-items:flex-start
 }
 
 .logo {
@@ -17,5 +21,80 @@
 
 .site__tittle {
     margin: 0;
-    padding: 2vw 0;
+    padding: 0;
+    padding: 2vh 0;
+    font-size: 1.5rem;
+}
+
+.nav__menu {
+    display: flex;
+    align-items: center;
+    padding: 8vh 5vw;
+    font-size: 1rem;
+}
+
+.link_nav {
+    margin-right: 1.5vw;
+    text-decoration: none;
+    padding: 0.5vh 0.75vw;
+    color: red;
+    transition: 0.5s;
+}
+
+.link_nav:hover {
+    background-color: red;
+    color: white;
+    transition: 1s;
+}
+
+.icon__menu {
+    display: none;
+    color: red;
+    font-size: 1.15rem;
+}
+
+@media screen and (max-width: 720px) {
+    .site__header {
+        flex-direction: row-reverse;
+        align-items: center;
+    }
+
+    .site__tittle {
+        display: none;
+    }
+    
+    .logo {
+        width: 20vw;
+    }
+
+    .logo__tittle--container {
+        flex-direction: column;
+        align-items:center;
+    }
+    
+    .icon__menu {
+        display: initial;
+        padding: 0 8vw;
+        font-size: 2.5rem;
+    }
+
+    .nav__menu {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        position: absolute;
+        left: 0;
+        padding: 5vh 40vw 60vh 5vw;
+        top: 18vh;
+        background-color: red;
+    }
+
+    .link_nav {
+        margin: 0 0 5vh 0;
+        color: white;
+    }
+
+    .cart {
+        color: white;
+    }
 }
