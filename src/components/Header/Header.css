@@ -83,10 +83,17 @@
         flex-direction: column;
         align-items: flex-start;
         position: absolute;
-        left: 0;
+        left: -100%;
         padding: 5vh 40vw 60vh 5vw;
         top: 18vh;
         background-color: red;
+        transition: 1s;
+        font-size: 1.5rem;
+    }
+
+    .ativada {
+        transition: 1s;
+        left: 0;
     }
 
     .link_nav {

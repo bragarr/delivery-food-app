@@ -6,6 +6,11 @@ import "./Header.css";
 import logo from "../../assets/logo.png";
 
 export function Header() {
+
+    const ativaBarraLateral = () => {
+        document.querySelector(".nav__menu").classList.toggle(("ativada"));
+    }
+
     return (
         <header className="site__header">
             <figure className="logo__tittle--container">
@@ -22,7 +27,7 @@ export function Header() {
                 <Link to={"service"} className="link_nav">Service</Link>
                 <FaShoppingCart className="cart"/>
             </nav>
-            <TiThMenu className="icon__menu"/>
+            <TiThMenu className="icon__menu" onClick={ativaBarraLateral}/>
         </header>
     )
 }
