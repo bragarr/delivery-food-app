@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom";
+import { Login } from "../Login/login";
 import { FaShoppingCart } from "react-icons/fa";
 import { TiThMenu } from "react-icons/ti";
 import "./Header.css";
@@ -26,6 +27,7 @@ export function Header() {
                 <Link to={"about"} className="link_nav">About Us</Link>
                 <Link to={"service"} className="link_nav">Service</Link>
                 <FaShoppingCart className="cart"/>
+                <Login />
             </nav>
             <TiThMenu className="icon__menu" onClick={ativaBarraLateral}/>
         </header>
