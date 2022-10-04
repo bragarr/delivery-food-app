@@ -1,5 +1,9 @@
 import { Link } from "react-router-dom";
+import { useEffect ,useState } from "react";
+import { useAuthState } from "react-firebase-hooks/auth";
+import { auth, db } from "../../services/firebase";
 import { Login } from "../Login/login";
+import { Loading } from "../Loading/Loading";
 import { FaShoppingCart } from "react-icons/fa";
 import { TiThMenu } from "react-icons/ti";
 import "./Header.css";
@@ -7,6 +11,17 @@ import "./Header.css";
 import logo from "../../assets/logo.png";
 
 export function Header() {
+
+    const [user] = useAuthState(auth);
+
+    useEffect(() => {
+        if(user) {
+            db.collection("users").doc(user.uid).set({
+                email: user.email,
+                photoURL: user.photoURL,
+            });
+        }
+    }, [user]);
 
     const ativaBarraLateral = () => {
         document.querySelector(".nav__menu").classList.toggle(("ativada"));
@@ -28,6 +43,7 @@ export function Header() {
                 <Link to={"service"} className="link_nav">Service</Link>
                 <FaShoppingCart className="cart"/>
                 <Login />
+                <img src={user?.photoURL} />
             </nav>
             <TiThMenu className="icon__menu" onClick={ativaBarraLateral}/>
         </header>
