@@ -9,6 +9,7 @@ import { TiThMenu } from "react-icons/ti";
 import "./Header.css";
 
 import logo from "../../assets/logo.png";
+import { Profile } from "../Profile/Profile";
 
 export function Header() {
 
@@ -22,6 +23,13 @@ export function Header() {
             });
         }
     }, [user]);
+
+    const DefineUSer = () => {
+        return !user ?
+        <Login />
+        :
+        <Profile />
+    }
 
     const ativaBarraLateral = () => {
         document.querySelector(".nav__menu").classList.toggle(("ativada"));
@@ -42,10 +50,21 @@ export function Header() {
                 <Link to={"about"} className="link_nav">About Us</Link>
                 <Link to={"service"} className="link_nav">Service</Link>
                 <FaShoppingCart className="cart"/>
-                <Login />
-                <img src={user?.photoURL} />
+                <DefineUSer />
             </nav>
             <TiThMenu className="icon__menu" onClick={ativaBarraLateral}/>
+            <article className="menu__user">
+                <DefineUSer />
+                <ul>
+                    <li>Topico 1</li>
+                    <li>Topico 2</li>
+                    <li>Topico 3</li>
+                    <li>Topico 4</li>
+                    <li>Topico 5</li>
+                    <li>Topico 6</li>
+                    <li>Topico 7</li>
+                </ul>
+            </article>
         </header>
     )
 }

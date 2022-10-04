@@ -1,0 +1,14 @@
+.profile__picture {
+    width: 3vw;
+    cursor: pointer;
+    border-radius: 50%;
+    border: 0.15rem solid red;
+}
+
+@media screen and (max-width:720px) {
+
+    .profile__picture {
+        width: 4rem;
+    }
+    
+}
