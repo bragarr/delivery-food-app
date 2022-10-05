@@ -8,9 +8,13 @@ export function Profile() {
 
     const [user] = useAuthState(auth);
 
+    const menuUsuario = () => {
+        document.querySelector(".menu__user").classList.toggle("menu__topdown");
+    }
+
     return (
         <img src={user?.photoURL}
-            onClick={() => [auth.signOut()]}
+            onClick={menuUsuario}
             alt="Profile Picture"
             className="profile__picture"
         />

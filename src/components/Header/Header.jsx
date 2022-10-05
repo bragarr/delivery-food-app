@@ -3,7 +3,6 @@ import { useEffect ,useState } from "react";
 import { useAuthState } from "react-firebase-hooks/auth";
 import { auth, db } from "../../services/firebase";
 import { Login } from "../Login/login";
-import { Loading } from "../Loading/Loading";
 import { FaShoppingCart } from "react-icons/fa";
 import { TiThMenu } from "react-icons/ti";
 import "./Header.css";
@@ -20,12 +19,14 @@ export function Header() {
             db.collection("users").doc(user.uid).set({
                 email: user.email,
                 photoURL: user.photoURL,
+                displayName: user.displayName,
             });
         }
     }, [user]);
 
     const DefineUSer = () => {
-        return !user ?
+        return !user
+        ?
         <Login />
         :
         <Profile />
@@ -33,6 +34,23 @@ export function Header() {
 
     const ativaBarraLateral = () => {
         document.querySelector(".nav__menu").classList.toggle(("ativada"));
+    }
+
+    const UserData = () => {
+        return !user
+        ?
+        <Login />
+        :
+        <figure>
+            <DefineUSer />
+            <h3>{user?.displayName}</h3>
+            <p>Seja bem vindo!</p>
+            <button onClick={() => [auth.signOut(), document.querySelector(".menu__user").classList.toggle("menu__topdown")]}
+                className="logout__button"
+            >
+                Sair
+            </button>
+        </figure>
     }
 
     return (
@@ -54,16 +72,7 @@ export function Header() {
             </nav>
             <TiThMenu className="icon__menu" onClick={ativaBarraLateral}/>
             <article className="menu__user">
-                <DefineUSer />
-                <ul>
-                    <li>Topico 1</li>
-                    <li>Topico 2</li>
-                    <li>Topico 3</li>
-                    <li>Topico 4</li>
-                    <li>Topico 5</li>
-                    <li>Topico 6</li>
-                    <li>Topico 7</li>
-                </ul>
+                <UserData />
             </article>
         </header>
     )

@@ -1,0 +1,7 @@
+.button__login {
+    background-color: white;
+    border: none;
+    color: red;
+    border: 0.15rem solid red;
+    padding: 0.25rem 1rem;
+}
