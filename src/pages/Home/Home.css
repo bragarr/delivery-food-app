@@ -1,0 +1,16 @@
+.main__presantation {
+    display: flex;
+    flex-direction: row;
+}
+
+.main__important {
+    width: 50%;
+}
+
+.main__products {
+    width: 50%;
+}
+
+.important__tittle {
+    font-size: 4rem;
+}
