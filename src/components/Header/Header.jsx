@@ -56,10 +56,12 @@ export function Header() {
     return (
         <header className="site__header">
             <figure className="logo__tittle--container">
-                <img src={logo}
+                <Link to={"/"}>
+                    <img src={logo}
                     alt="app logo"
                     className="logo"
-                />
+                    />
+                </Link>
                 <h1 className="site__tittle">Delivery App</h1>
             </figure>
             <nav className="nav__menu">
