@@ -1,8 +1,28 @@
+import { createContext, useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 
 import "./Home.css";
 
+import {
+    Api
+} from "../../services/Api.jsx";
+
+const foodUrl = Api;
+
 export function Home() {
+
+    const [foodCategory, setFoodCategory] = useState([]);
+    const getFoodCategory = async (url) => {
+        const res = await fetch(url);
+        const data = await res.json();
+        setFoodCategory(data);
+    }
+
+    useEffect(() => {
+        const foodCategoryUrl = `${foodUrl}Seafood`
+        getFoodCategory(foodCategoryUrl);
+    }, []);
+
     return (
         <main>
             <section className="main__presantation">
