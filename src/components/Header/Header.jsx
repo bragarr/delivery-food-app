@@ -4,7 +4,7 @@ import { useAuthState } from "react-firebase-hooks/auth";
 import { auth, db } from "../../services/firebase";
 import { FaShoppingCart } from "react-icons/fa";
 import { TiThMenu } from "react-icons/ti";
-import { Login } from "../Login/login";
+import { Login } from "../Login/Login";
 import "./Header.css";
 
 import logo from "../../assets/logo.png";
