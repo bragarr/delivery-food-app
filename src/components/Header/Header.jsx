@@ -2,9 +2,9 @@ import { Link } from "react-router-dom";
 import { useEffect ,useState } from "react";
 import { useAuthState } from "react-firebase-hooks/auth";
 import { auth, db } from "../../services/firebase";
-import { Login } from "../Login/login";
 import { FaShoppingCart } from "react-icons/fa";
 import { TiThMenu } from "react-icons/ti";
+import { Login } from "../Login/login";
 import "./Header.css";
 
 import logo from "../../assets/logo.png";
