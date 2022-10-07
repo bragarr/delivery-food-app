@@ -15,12 +15,12 @@ export function Home() {
     const getFoodCategory = async (url) => {
         const res = await fetch(url);
         const data = await res.json();
-        setFoodCategory(data);
+        setFoodCategory(data.meals);
     }
 
     useEffect(() => {
         const foodCategoryUrl = `${foodUrl}Seafood`
-        getFoodCategory(foodCategoryUrl);
+        getFoodCategory(foodCategoryUrl)
     }, []);
 
     return (
