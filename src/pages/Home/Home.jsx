@@ -1,13 +1,15 @@
-import { createContext, useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 
 import "./Home.css";
 
 import {
-    Api
-} from "../../services/Api.jsx";
+    API_CATEGORY,
 
-const foodUrl = Api;
+} from "../../services/Api.jsx";
+import { BestFoods } from "../../components/BestFoods/BestFood";
+
+const foodUrl = API_CATEGORY;
 
 export function Home() {
 
@@ -15,34 +17,57 @@ export function Home() {
     const getFoodCategory = async (url) => {
         const res = await fetch(url);
         const data = await res.json();
-        setFoodCategory(data.meals);
+        setFoodCategory(data.categories);
+        console.log(data.categories);
     }
 
     useEffect(() => {
-        const foodCategoryUrl = `${foodUrl}Seafood`
-        getFoodCategory(foodCategoryUrl)
-    }, []);
+        const foodCategoryUrl = `${foodUrl}`
+        getFoodCategory(foodCategoryUrl);
+    },[]);
 
     return (
         <main>
             <section className="main__presantation">
                 <article className="main__important">
-                    <h2 className="important__tittle">Uma das entregas mais rápidas da sua <span className="red__word">cidade!</span></h2>
+                    <h2 className="important__tittle">The fast Delivery in your <span className="red__word">city!</span></h2>
                     <p className="important__text">
-                        Aqui nos dedicamos em oferecer a melhor experiência
-                        que você possa imaginar!
-                        Sinta-se a vontade para navegar e escolher o seu
-                        pedido e recebe-lo em um piscar de olhos!
+                        Welcome to DeliveyApp!
+                    </p>
+                    <p className="important__text">
+                        We dedicate ourselves to give 
+                        the best experience you can't even imagine it!
+                    </p>                    
+                    <p className="important__text">
+                        Feel free to go deep in our page and choose whatever
+                        you want and receive in your place faster than you expect!
+                    </p>
+                    <p className="important__text">
+                        Choose whatever you want!
+                    </p>
+                    <p className="important__text">
+                       Receive in your place faster than you expect!
                     </p>
                     <Link to={"menu"}
                         className="order__button"
                     >
-                        Pedir agora!
+                        Order Now!
                     </Link>
                 </article>
                 <article className="main__products">
-                    <p>Apresentação de produtos</p>
+                    <h2 className="important__tittle second__trending">The Best of The Moment</h2>
+                    <BestFoods />
                 </article>
+            </section>
+            <section className="category__presantation">
+                <h2>Categories</h2>
+                <ul className="category__list">
+                    {foodCategory.length > 0 && foodCategory.map((category) =>
+                        <li className="item__list" key={category.idCategory}>
+                            {category.strCategory}
+                        </li>
+                    )}
+                </ul>
             </section>
         </main>
     )

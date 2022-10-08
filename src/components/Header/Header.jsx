@@ -67,8 +67,8 @@ export function Header() {
             <nav className="nav__menu">
                 <Link to={"/"} className="link_nav">Home</Link>
                 <Link to={"menu"} className="link_nav">Menu</Link>
-                <Link to={"about"} className="link_nav">Sobre</Link>
-                <Link to={"service"} className="link_nav">Serviço</Link>
+                <Link to={"about"} className="link_nav">About</Link>
+                <Link to={"service"} className="link_nav">Service</Link>
                 <FaShoppingCart className="cart"/>
                 <DefineUSer />
             </nav>

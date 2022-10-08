@@ -6,11 +6,23 @@
 
 .main__important, .main__products {
     width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+.main__products {
+    align-items: center;
 }
 
 .important__tittle {
     font-size: 5rem;
     margin-bottom: 0;
+}
+
+.second__trending {
+    text-align: center;
+    color: red;
 }
 
 .important__text {
@@ -19,6 +31,8 @@
 
 .order__button {
     text-decoration: none;
+    width: 10rem;
+    text-align: center;
     background-color: red;
     color: white;
     padding: 0.75vh 2vw;
@@ -29,6 +43,34 @@
 
 .red__word {
     color: red;
+}
+
+.category__presantation {
+    margin: 5vh 4vw;
+}
+
+.category__list {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    font-size: 1.5rem;
+    cursor: pointer;
+    justify-content: left;
+}
+
+.item__list {
+    margin: 1rem 1rem;
+    padding: 1rem 2rem;
+    background-color: red;
+    color: white;
+    border-radius: 1rem;
+}
+
+.trending {
+    justify-content: center;
 }
 
 @media screen and (max-width:1280px) {
