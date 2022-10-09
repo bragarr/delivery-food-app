@@ -3,6 +3,8 @@ import { Link } from "react-router-dom";
 
 import "./Home.css";
 
+import fastBadge from "../../assets/fastD.png";
+
 import {
     API_CATEGORY,
 
@@ -33,26 +35,25 @@ export function Home() {
                     <h2 className="important__tittle">The fast Delivery in your <span className="red__word">city!</span></h2>
                     <p className="important__text">
                         Welcome to DeliveyApp!
-                    </p>
-                    <p className="important__text">
                         We dedicate ourselves to give 
                         the best experience you can't even imagine it!
-                    </p>                    
-                    <p className="important__text">
                         Feel free to go deep in our page and choose whatever
                         you want and receive in your place faster than you expect!
-                    </p>
-                    <p className="important__text">
                         Choose whatever you want!
-                    </p>
-                    <p className="important__text">
-                       Receive in your place faster than you expect!
+                        Receive in your place faster than you expect!
                     </p>
                     <Link to={"menu"}
                         className="order__button"
                     >
                         Order Now!
                     </Link>
+                    <figure className="container__badge">
+                        <img 
+                            src={fastBadge}
+                            alt="badge for fast delivey certification"
+                            className="fast__badge"
+                        />
+                    </figure>
                 </article>
                 <article className="main__products">
                     <h2 className="important__tittle second__trending">The Best of The Moment</h2>

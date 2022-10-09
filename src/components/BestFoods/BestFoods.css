@@ -1,18 +1,25 @@
+.containers__best {
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    justify-content: center;
+}
+
 .container__best {
     display: flex;
     flex-direction: column;
     align-items: center;
-    font-size: 2rem;
-    background-color: rgba(255, 0, 0, 0.808);
-    width: 25vw;
+    font-size: 1rem;
+    background-color: #ff0000;
+    width: 15vw;
     padding: 2vh 0;
-    border-radius: 10%;
+    border-radius: 10px;
     color: white;
     font-weight: 700;
+    margin: 1rem;
 }
 
 .image__best {
-    width: 20vw;
+    width: 10vw;
     border-radius: 50%;
 }
 
@@ -25,19 +32,11 @@
 
 .category {
     opacity: 0.5;
-    font-size: 1.35rem;
+    font-size: 0.8rem;
 }
 
 @media screen and (max-width:1280px) {
 
-    .container__best {
-        width: 25vw;
-        font-size: 1.4rem;
-    }
-
-    .image__best {
-        width: 12vw;
-    }
 
 
 }
