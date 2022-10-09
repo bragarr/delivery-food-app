@@ -32,7 +32,7 @@ export function Home() {
         <main>
             <section className="main__presantation">
                 <article className="main__important">
-                    <h2 className="important__tittle">The fast Delivery in your <span className="red__word">city!</span></h2>
+                    <h2 className="important__tittle">The Fast Delivery in Your <span className="red__word">city!</span></h2>
                     <p className="important__text">
                         Welcome to DeliveyApp!
                         We dedicate ourselves to give 
@@ -56,7 +56,7 @@ export function Home() {
                     </figure>
                 </article>
                 <article className="main__products">
-                    <h2 className="important__tittle second__trending">The Best of The Moment</h2>
+                    <h2 className="important__tittle second__trending">Trending</h2>
                     <BestFoods />
                 </article>
             </section>

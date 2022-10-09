@@ -66,7 +66,7 @@ export function BestFoods() {
                     <p className="data__best category">{bestFoods[ramdomFood + 1].strCategory}</p>
                 }
                 <p className="data__best">${ramdomPrice}</p>
-            </figure>
+            </figure>       
             <figure className="container__best">
                 {bestFoods.length > 0 &&
                     <img 

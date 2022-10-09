@@ -13,16 +13,15 @@
 
 .main__products {
     align-items: center;
-    justify-content: space-between;
+    justify-content: space-evenly;
 }
 
 .important__tittle {
-    font-size: 5rem;
+    font-size: 4rem;
     margin-bottom: 0;
 }
 
 .second__trending {
-    text-align: center;
     color: red;
 }
 
@@ -86,6 +85,11 @@
 }
 
 @media screen and (max-width:1280px) {
+
+    .main__presantation {
+        column-gap: 3rem;
+    }
+
     .important__tittle {
         font-size: 3rem;
     }
@@ -107,5 +111,9 @@
 
     .main__important, .main__products {
         width: 100%;
+    }
+
+    .important__tittle {
+        margin-top: 0;
     }
 }
