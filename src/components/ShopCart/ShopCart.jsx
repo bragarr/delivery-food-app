@@ -13,7 +13,13 @@ export function ShopCart() {
             <article className="cart__header">
                 <AiOutlineArrowLeft className="hide__button" onClick={ativaCart} />
                 <h3 className="cart__tittle">Cart</h3>
-                <button className="clear__button"><AiFillCloseSquare /></button>
+                <button 
+                    className="clear__button"
+                >
+                <AiFillCloseSquare
+                    className="close__symbol"
+                />
+                </button>
             </article>
             <p>Um tipo de seção</p>
             <p>dois tipo de seção</p>

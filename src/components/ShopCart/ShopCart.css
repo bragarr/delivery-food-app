@@ -2,7 +2,7 @@
     background-color: white;
     border: 0.1rem solid red;
     position: fixed;
-    top: -100%;
+    top: -200%;
     right: 1vw;
     margin: 0;
     -webkit-user-select: none;
@@ -18,11 +18,16 @@
 
 .cart__header {
     display: flex;
-    justify-content: space-between;
+    justify-content: space-evenly;
     align-items: center;
+    font-size: 3rem;
 }
 
 .hide__button {
     cursor: pointer;
     color: red;
+}
+
+.close__symbol {
+    font-size: 3rem;
 }
