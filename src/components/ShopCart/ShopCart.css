@@ -1,0 +1,28 @@
+.cart__container {
+    background-color: white;
+    border: 0.1rem solid red;
+    position: fixed;
+    top: -100%;
+    right: 1vw;
+    margin: 0;
+    -webkit-user-select: none;
+    user-select: none;
+    transition: 1s;
+    width: 30%;
+}
+
+.cart__ativado {
+    top: 5vh;
+    transition: 1s;
+}
+
+.cart__header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.hide__button {
+    cursor: pointer;
+    color: red;
+}

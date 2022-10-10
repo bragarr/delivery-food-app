@@ -20,7 +20,6 @@ export function Home() {
         const res = await fetch(url);
         const data = await res.json();
         setFoodCategory(data.categories);
-        console.log(data.categories);
     }
 
     useEffect(() => {

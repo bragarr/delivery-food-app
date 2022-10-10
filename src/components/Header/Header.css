@@ -58,7 +58,7 @@
 }
 
 .menu__user {
-    position: absolute;
+    position: fixed;
     background-color: white;
     border-radius: 4%;
     border: 0.15rem solid red;

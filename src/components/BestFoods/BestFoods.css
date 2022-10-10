@@ -35,6 +35,10 @@
     font-size: 0.8rem;
 }
 
+.slider {
+    text-align: center;
+}
+
 @media screen and (max-width:1280px) {
     .container__best {
         font-size: 0.7rem;

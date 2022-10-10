@@ -6,9 +6,11 @@ import { FaShoppingCart } from "react-icons/fa";
 import { TiThMenu } from "react-icons/ti";
 import { Login } from "../Login/Login";
 import "./Header.css";
+import "../ShopCart/ShopCart.css"
 
 import logo from "../../assets/Logo.png";
 import { Profile } from "../Profile/Profile";
+import { ShopCart } from "../ShopCart/ShopCart";
 
 export function Header() {
 
@@ -34,6 +36,10 @@ export function Header() {
 
     const ativaBarraLateral = () => {
         document.querySelector(".nav__menu").classList.toggle(("ativada"));
+    }
+
+    const ativaCart = () => {
+        document.querySelector(".cart__container").classList.toggle(("cart__ativado"));
     }
 
     const UserData = () => {
@@ -69,8 +75,9 @@ export function Header() {
                 <Link to={"menu"} className="link_nav">Menu</Link>
                 <Link to={"about"} className="link_nav">About</Link>
                 <Link to={"service"} className="link_nav">Service</Link>
-                <FaShoppingCart className="cart"/>
+                <FaShoppingCart className="cart" onClick={ativaCart} />
                 <DefineUSer />
+                <ShopCart />
             </nav>
             <TiThMenu className="icon__menu" onClick={ativaBarraLateral}/>
             <article className="menu__user">
