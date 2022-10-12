@@ -16,15 +16,28 @@ export function ShopCart() {
                 <button 
                     className="clear__button"
                 >
-                <AiFillCloseSquare
-                    className="close__symbol"
-                />
+                    Clear    
+                    <AiFillCloseSquare
+                        className="close__symbol"
+                    />
                 </button>
             </article>
-            <p>Um tipo de seção</p>
-            <p>dois tipo de seção</p>
-            <p>três tipo de seção</p>
-            <p>Quatro tipo de seção</p>
+            <main className="cart__main">
+                <article className="cart__items">
+                    <span>Your cart is empity</span>
+                </article>
+                <article className="cart__values">
+                    <p className="cart__value--information">Sub total</p>
+                    <span></span>
+                    <p className="cart__value--information">Delivery Fee</p>
+                    <span></span>
+                </article>
+                <article className="cart__total">
+                    <p className="cart__value--information">Total</p>
+                    <span></span>
+                </article>
+                <button className="chckout__button">Check Out</button>
+            </main>
         </section>
     );
 }

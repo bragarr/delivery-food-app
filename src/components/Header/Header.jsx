@@ -71,10 +71,6 @@ export function Header() {
                 <h1 className="site__tittle">Delivery App</h1>
             </figure>
             <nav className="nav__menu">
-                <Link to={"/"} className="link_nav">Home</Link>
-                <Link to={"menu"} className="link_nav">Menu</Link>
-                <Link to={"about"} className="link_nav">About</Link>
-                <Link to={"service"} className="link_nav">Service</Link>
                 <FaShoppingCart className="cart" onClick={ativaCart} />
                 <DefineUSer />
                 <ShopCart />
