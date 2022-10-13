@@ -88,3 +88,7 @@
     height: 8vh;
     background-color: orange;
 }
+
+.cart__shopping {
+    cursor: pointer;
+}

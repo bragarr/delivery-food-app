@@ -1,5 +1,7 @@
 import { useState, useEffect } from "react";
 
+import { FaCartPlus } from "react-icons/fa";
+
 import "./BestFoods.css"
 
 import {
@@ -79,6 +81,7 @@ export function BestFoods() {
                         <p className="data__best category">{bestFoods[ramdomFood].strCategory}</p>
                     }
                     <p className="data__best">${ramdomPrice}</p>
+                    <FaCartPlus className="cart__shopping"/>
                 </figure>
                 <figure className="container__best container__two">
                     {bestFoods.length > 0 &&
@@ -95,6 +98,7 @@ export function BestFoods() {
                         <p className="data__best category">{bestFoods[ramdomFood + 1].strCategory}</p>
                     }
                     <p className="data__best">${ramdomPrice}</p>
+                    <FaCartPlus className="cart__shopping"/>
                 </figure>       
                 <figure className="container__best container__three">
                     {bestFoods.length > 0 &&
@@ -111,6 +115,7 @@ export function BestFoods() {
                         <p className="data__best category">{bestFoods[ramdomFood + 2].strCategory}</p>
                     }
                     <p className="data__best">${ramdomPrice}</p>
+                    <FaCartPlus className="cart__shopping"/>
                 </figure>
                 <figure className="container__best container__four">
                     {bestFoods.length > 0 &&
@@ -127,6 +132,7 @@ export function BestFoods() {
                         <p className="data__best category">{bestFoods[ramdomFood + 3].strCategory}</p>
                     }
                     <p className="data__best">${ramdomPrice}</p>
+                    <FaCartPlus className="cart__shopping"/>
                 </figure>
             </div>
             <div className="slider">

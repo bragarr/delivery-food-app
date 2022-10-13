@@ -41,7 +41,7 @@ export function Home() {
                         Choose whatever you want!
                         Receive in your place faster than you expect!
                     </p>
-                    <Link to={"menu"}
+                    <Link to={"/"}
                         className="order__button"
                     >
                         Order Now!
