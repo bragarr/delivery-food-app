@@ -39,6 +39,10 @@ export function Header() {
     }
 
     const ativaCart = () => {
+        return !user
+        ?
+        alert("Please Log In first to unlock your shopping cart!")
+        :
         document.querySelector(".cart__container").classList.toggle(("cart__ativado"));
     }
 

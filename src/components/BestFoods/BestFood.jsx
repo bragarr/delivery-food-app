@@ -1,5 +1,7 @@
 import { useState, useEffect } from "react";
 
+import { ShopCart } from "../ShopCart/ShopCart";
+
 import { FaCartPlus } from "react-icons/fa";
 
 import "./BestFoods.css"
@@ -12,7 +14,7 @@ const foodUrl = API_SEARCH;
 
 const foodSpecialOfTheWeek = "chicken";
 
-const ramdomPrice = (Math.random()*30).toFixed(2);
+const prices = ["$5,99", "$5,99", "$9,99", "$9,99"]
 const ramdomFood = Math.round(Math.random()*15);
 
 function changeBestFood() {
@@ -42,10 +44,6 @@ function changeBestFood() {
             document.querySelector(".container__four").classList.add("container__ativado");
         }
     })
-}
-
-function definesFirstSelectionBestFoods() {
-    alert("ta funcionando");
 }
 
 export function BestFoods() {
@@ -80,8 +78,10 @@ export function BestFoods() {
                     {bestFoods.length > 0 &&
                         <p className="data__best category">{bestFoods[ramdomFood].strCategory}</p>
                     }
-                    <p className="data__best">${ramdomPrice}</p>
-                    <FaCartPlus className="cart__shopping"/>
+                    <p className="data__best">${prices[0]}</p>
+                    {bestFoods.length > 0 &&
+                        <FaCartPlus className="cart__shopping"/>
+                    }
                 </figure>
                 <figure className="container__best container__two">
                     {bestFoods.length > 0 &&
@@ -97,8 +97,10 @@ export function BestFoods() {
                     {bestFoods.length > 0 &&
                         <p className="data__best category">{bestFoods[ramdomFood + 1].strCategory}</p>
                     }
-                    <p className="data__best">${ramdomPrice}</p>
-                    <FaCartPlus className="cart__shopping"/>
+                     <p className="data__best">${prices[1]}</p>
+                    {bestFoods.length > 0 &&
+                        <FaCartPlus className="cart__shopping"/>
+                    }
                 </figure>       
                 <figure className="container__best container__three">
                     {bestFoods.length > 0 &&
@@ -114,8 +116,10 @@ export function BestFoods() {
                     {bestFoods.length > 0 &&
                         <p className="data__best category">{bestFoods[ramdomFood + 2].strCategory}</p>
                     }
-                    <p className="data__best">${ramdomPrice}</p>
-                    <FaCartPlus className="cart__shopping"/>
+                    <p className="data__best">${prices[2]}</p>
+                    {bestFoods.length > 0 &&
+                        <FaCartPlus className="cart__shopping"/>
+                    }
                 </figure>
                 <figure className="container__best container__four">
                     {bestFoods.length > 0 &&
@@ -131,8 +135,10 @@ export function BestFoods() {
                     {bestFoods.length > 0 &&
                         <p className="data__best category">{bestFoods[ramdomFood + 3].strCategory}</p>
                     }
-                    <p className="data__best">${ramdomPrice}</p>
-                    <FaCartPlus className="cart__shopping"/>
+                     <p className="data__best">${prices[3]}</p>
+                    {bestFoods.length > 0 &&
+                        <FaCartPlus className="cart__shopping"/>
+                    }
                 </figure>
             </div>
             <div className="slider">

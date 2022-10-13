@@ -1,3 +1,5 @@
+import { auth, provider } from "../../services/firebase";
+
 import { AiOutlineArrowLeft, AiFillCloseSquare } from "react-icons/ai";
 
 import "../Header/Header.css"
@@ -24,7 +26,7 @@ export function ShopCart() {
             </article>
             <main className="cart__main">
                 <article className="cart__items">
-                    <span>Your cart is empity</span>
+                    <span className="alert__cart">Your cart is empity</span>
                 </article>
                 <article className="cart__values">
                     <p className="cart__value--information">Sub total</p>

@@ -1,6 +1,5 @@
-import { auth, db } from "../../services/firebase";
+import { auth } from "../../services/firebase";
 import { useAuthState } from "react-firebase-hooks/auth";
-import { useCollection } from "react-firebase-hooks/firestore";
 
 import "./Profile.css"
 
