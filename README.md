@@ -6,6 +6,13 @@ Você pode verificar este projeto através do Link abaixo:
 
 https://fast-delivery-food-app.vercel.app/
 
+Objetivos: 
+
+- Reforçar funções da biblioteca React
+- Utilizar Firebase para sistema de login de usuário com plataforma Google
+- Simular um ambiente de um Delivery App.
+- Aprimor responsividade de menus para plataformas mobile
+
 Versão Desktop:
 
 ![image](https://user-images.githubusercontent.com/108424896/195713816-f09ce526-9def-4680-862a-c43371b00264.png)
@@ -33,10 +40,3 @@ Versão Mobile:
 
 ![image](https://user-images.githubusercontent.com/108424896/195714320-3ddc607b-7af0-4036-b65d-78985df45cff.png)
 
-
-Objetivos: 
-
-- Reforçar funções da biblioteca React
-- Utilizar Firebase para sistema de login de usuário com plataforma Google
-- Simular um ambiente de um Delivery App.
-- Aprimor responsividade de menus para plataformas mobile
