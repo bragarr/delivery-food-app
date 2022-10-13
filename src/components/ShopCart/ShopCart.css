@@ -9,7 +9,7 @@
     user-select: none;
     transition: 1s;
     width: 25%;
-    height: 99%;
+    height: 90vh;
 }
 
 .cart__main {
@@ -39,6 +39,7 @@
     font-size: 1.5rem;
     color: red;
     font-weight: 700;
+    height: 10vh;
 }
 
 .hide__button {
@@ -50,23 +51,32 @@
 }
 
 .cart__items {
-    height: 60vh;
+    height: 40vh;
     overflow: auto;
     background-color: #000000;
     border-radius: 40px 40px 0 0;
     color: white;
+    padding: 2vh 2vw;
 }
 
 .cart__values {
     background-color: #2e2d2d;
-    height: 19vh;
+    height: 15vh;
     border-radius: 40px 40px 0 0;
     color: white;
+    padding: 2vh 2vw;
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    justify-content: center;
+    align-items: center;
+    text-align: center;
 }
 
 .cart__total {
-    height: 10vh;
+    height: 5vh;
     background-color: #2e2d2d;
+    padding: 2vh 2vw;
+    color: white;
 }
 
 .cart__value--information {
@@ -75,5 +85,6 @@
 
 .chckout__button {
     width: 100%;
-    background-color: #2e2d2d;
+    height: 8vh;
+    background-color: orange;
 }

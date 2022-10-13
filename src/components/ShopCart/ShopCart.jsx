@@ -28,9 +28,9 @@ export function ShopCart() {
                 </article>
                 <article className="cart__values">
                     <p className="cart__value--information">Sub total</p>
-                    <span></span>
+                    <span>0.00</span>
                     <p className="cart__value--information">Delivery Fee</p>
-                    <span></span>
+                    <span>0.00</span>
                 </article>
                 <article className="cart__total">
                     <p className="cart__value--information">Total</p>
